@@ -1,13 +1,10 @@
 import './App.css';
-import Demonym from "./Components/Demonym/demonym";
+import DemonymApp from "./Components/DemonymApp/demonymApp";
 
 function App() {
   return (
     <div className="App">
-      <Demonym
-        name='Barbadian'
-        country='Barbados'
-      />
+      <DemonymApp />
     </div>
   );
 }

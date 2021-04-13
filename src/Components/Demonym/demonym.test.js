@@ -1,6 +1,6 @@
 // make React available
 import React from "react";
-// make the ReactDOM avaailable, necessary for rendering the component
+// make the ReactDOM available, necessary for rendering the component
 import ReactDOM from 'react-dom';
 // make the App component available
 import App from '../../App';
