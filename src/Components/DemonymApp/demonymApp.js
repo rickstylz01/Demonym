@@ -4,6 +4,24 @@ import Demonym from "../Demonym/demonym";
 import CountrySelector from "../CountrySelector/countrySelector";
 
 class DemonymApp extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      countries: [],
+      selected: null
+    };
+  }
+
+  componentDidMount() {
+    fetch('https://restcountries.eu/rest/v2/all')
+      .then(response => response.json())
+      .then(data => {
+        const countries = Object.keys(data)
+          .map(countryObj => countryObj.name);
+        console.log(data);
+      });
+  }
+
   render() {
     return (
       <div className="demonym_app">
