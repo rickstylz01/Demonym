@@ -16,9 +16,9 @@ class DemonymApp extends Component {
     fetch('https://restcountries.eu/rest/v2/all')
       .then(response => response.json())
       .then(data => {
-        const countries = Object.keys(data)
+        const countries = data
           .map(countryObj => countryObj.name);
-        console.log(data);
+        console.log(countries);
       });
   }
 
